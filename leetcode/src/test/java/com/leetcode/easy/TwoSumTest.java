@@ -11,14 +11,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 public class TwoSumTest {
     @ParameterizedTest
     @MethodSource
-    void testCase(int[] input1, int input2, int[] expectedAnswer) {
+    void testTwoSum(int[] input1, int input2, int[] expectedAnswer) {
         TwoSum twoSum = new TwoSum();
 
         int[] answer = twoSum.twoSum(input1, input2);
         assertArrayEquals(answer, expectedAnswer);
     }
 
-    private static Stream<Arguments> testCase() {
+    private static Stream<Arguments> testTwoSum() {
         return Stream.of(
                 Arguments.of(new int[] { 2, 7, 11, 15 }, 9, new int[] { 0, 1 }),
                 Arguments.of(new int[] { 3, 2, 4 }, 6, new int[] { 1, 2 }),
